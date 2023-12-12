@@ -17,6 +17,14 @@ namespace Test.Net022
             int itemAtIndex = list.GetValue(1);
             Console.WriteLine(itemAtIndex);
 
+
+            Publisher publisher = new Publisher();
+            Subscriber subscriber = new Subscriber();
+
+            publisher.Event += subscriber.HandleMyEvent;
+
+            publisher.Printing();
+
         }
     }
 }
